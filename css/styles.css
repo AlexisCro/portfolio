@@ -11116,6 +11116,13 @@ body {
   padding-bottom: 4rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
+
+.skills-section {
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+}
+
 .about-section p {
   margin-bottom: 5rem;
 }
@@ -11202,3 +11209,135 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+/* skills */
+#skill-gauge {
+  display: none;
+}
+
+.chart span {
+  font-size: 18px;
+  font-family: font-file-82132;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.page-skills .text-zone+div {
+  padding-right: 5rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.chart {
+  margin-bottom: 2rem;
+}
+
+.chart footer {
+  background-color: #373737;
+  height: 5px;
+}
+.page-skills .text-zone+div {
+  padding-right: 5rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.chart footer div.ror {
+  width: 0;
+  height: 100%;
+  background: #e13628;
+  box-shadow: 0px 0px 20px #f1c8c4e5;
+  animation: w75 1s ease forwards;
+  animation-delay: 1.2s;
+}
+@keyframes w75 {
+  from { width: 0%; }
+  to { width: 75%; }
+}
+
+.chart footer div.html {
+  width: 0;
+  height: 100%;
+  background: #dd6c19;
+  box-shadow: 0px 0px 20px #f1c8c4e5;
+  animation: w80 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.chart footer div.git {
+  width: 0;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 20px #fff;
+  animation: w80 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.chart footer div.hotwire {
+  width: 0;
+  height: 100%;
+  background: #8d5df2;
+  box-shadow: 0px 0px 20px #8d5df2;
+  animation: w75 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes w80 {
+  from { width: 0%; }
+  to { width: 80%; }
+}
+
+@keyframes w75 {
+  from { width: 0%; }
+  to { width: 75%; }
+}
+
+.chart footer div.css {
+  width: 0;
+  height: 100%;
+  background-color: #6c08fd;
+  box-shadow: 0px 0px 20px #8d5df2;
+  animation: w60 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes w90 {
+  from { width: 0%; }
+  to { width: 90%; }
+}
+
+.chart footer div.js {
+  width: 0;
+  height: 100%;
+  background-color: #d5db17;
+  box-shadow: 0px 0px 20px #f1f8c4e5;
+  animation: w50 1s ease forwards;
+  animation-delay: 1.3s;
+}
+@keyframes w50 {
+  from { width: 0%; }
+  to { width: 50%; }
+}
+
+.chart footer div.w60 {
+  width: 0;
+  height: 100%;
+background: rgb(210, 108, 213);
+  animation: w60 1s ease forwards;
+animation-delay: 1.1s;
+}
+@keyframes w60 {
+  from { width: 0%; }
+  to { width: 60%; }
+}
+

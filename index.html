@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/media_query.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -68,12 +69,12 @@
                       </p>
                   </div>
                   <div class="col-lg-6">
-                    <img src="assets/img/alexis-crozier-profile-picture-about.avif" alt="portrait alexis crozier" />
+                    <img src="assets/img/alexis-crozier-profile-picture-about.avif" alt="portrait alexis crozier" style="max-width: 100%;" />
                   </div>
                 </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center what-i-like">
                   <div class="col-lg-6">
-                    <img src="assets/img/alexis-crozier-about.avif" alt="portrait alexis crozier" />
+                    <img src="assets/img/alexis-crozier-about.avif" alt="portrait alexis crozier" style="max-width: 100%;" />
                   </div>
                   <div class="col-lg-6 pt-5">
                       <h2 class="text-white mb-4">Ce que j'aime ?</h2>
@@ -87,6 +88,62 @@
                   </div>
                 </div>
             </div>
+        </section>
+        <!-- Skills -->
+        <section class="skills-section text-center" id="skills">
+          <div class="container px-4 px-lg-5">
+            <!-- skills animation -->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+              <h2 class="text-white mb-4">Compétences</h2>
+              <div class="skills-details text-white-50 justify-content-center flex-row flex-wrap" id="skill-gauge">
+                <div class='d-inline-block mx-2 w-75'>
+                  <div class="chart">
+                    <span>Ruby on Rails</span>
+                    <footer>
+                      <div class="ror"></div>
+                    </footer>
+                  </div>
+                  <div class="chart">
+                    <span>Hotwire</span>
+                    <footer>
+                      <div class="hotwire"></div>
+                    </footer>
+                  </div>
+                  <div class="chart">
+                    <span>Javascript / Stimulus</span>
+                    <footer>
+                      <div class="js"></div>
+                    </footer>
+                  </div>
+                </div>
+
+                <div class='d-inline-block mx-2 w-75'>
+                  <div class="chart">
+                    <span>HTML</span>
+                    <footer>
+                      <div class="html"></div>
+                    </footer>
+                  </div>
+                  <div class="chart">
+                    <span>CSS / Bootstrap</span>
+                    <footer>
+                      <div class="css"></div>
+                    </footer>
+                  </div>
+                  <div class="chart">
+                    <span>GIT / GITHUB</span>
+                    <footer>
+                      <div class="git"></div>
+                    </footer>
+                  </div>  
+                </div>
+
+                <div class="work-row">
+                  <div class="work-box"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
@@ -228,5 +285,6 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="js/intersectionObservor.js"></script>
     </body>
 </html>
