@@ -11136,7 +11136,6 @@ body {
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
   }
 }
 .projects-section .project-text {
@@ -11339,5 +11338,36 @@ animation-delay: 1.1s;
 @keyframes w60 {
   from { width: 0%; }
   to { width: 60%; }
+}
+
+/* btn CTA to contact form */
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+button {  
+  color: #207cd8;
+  transition: 0.25s;
+  
+  &:hover,
+  &:focus { 
+    border-color: #207cd8;
+    color: #207cd8;
+  }
+}
+
+.pulse:hover, 
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #207cd8; }
 }
 
