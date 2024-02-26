@@ -50,65 +50,17 @@
           </script>
         </div>
         <!-- Signup-->
-        <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Vous souhaitez me contacter ?</h2>
-                        <form action="https://formspree.io/f/mwkgblbb" method="post" id="form-contact">
-                            <div class='container'>
-                              <div class='row'>
-                                <div class="btn-group my-2" role="group" aria-label="Basic radio toggle button group">
-                                  <input type="radio" class="btn-check" name="btnradio" value="Mr" id="btnradio1" autocomplete="off" checked>
-                                  <label class="btn btn-outline-primary text-white" for="btnradio1">Mr.</label>
-                                
-                                  <input type="radio" class="btn-check" name="btnradio" value="Mme" id="btnradio2" autocomplete="off">
-                                  <label class="btn btn-outline-primary text-white" for="btnradio2">Mme.</label>
-                                
-                                  <input type="radio" class="btn-check" name="btnradio" value="Autre" id="btnradio3" autocomplete="off">
-                                  <label class="btn btn-outline-primary text-white" for="btnradio3">Autre</label>
-                                </div>
-                              </div>
-                              <div class='row my-2'>
-                                <div class='col-lg-6 mb-2'>
-                                  <input name="firstName" class="form-control" id="firstName" type="text" placeholder="Prénom" aria-label="Prénom" data-sb-validations="required" />
-                                </div>
-                                <div class='col-lg-6 mb-2'>
-                                  <input name="lastName" class="form-control" id="lastName" type="text" placeholder="Nom" aria-label="Nom" data-sb-validations="required" />
-                                </div>
-                              </div>
-                              <div class="row my-2">
-                                <div class="col-md-12">
-                                  <input name="email" class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Email" data-sb-validations="required,email" />
-                                </div>
-                              </div>
-                              <div class='row my-2 px-2'>
-                                <textarea name="message" class="form-control mt-3" id="message" type="text" placeholder="Votre message..." aria-label="Votre message..." data-sb-validations="required"></textarea>
-                              </div>
-                              <div class='row'>
-                                <div class="col">
-                                  <button class="btn btn-primary" id="submitButton" type="submit">Contacter moi !</button>
-                                </div>
-                                <div class="col">
-                                  <button class="btn btn-primary text-white" id="resetButton" type="reset">Reset formulaire</button>
-                                </div>  
-                              </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div id="signup">
+          <script>
+            renderContent('fr/signup', 'signup')
+          </script>
+        </div>
         <!-- Contact-->
-        <section class="contact-section bg-black">
-          <div class="container px-4 px-lg-5">
-            <div class="social d-flex justify-content-center">
-              <a class="mx-2" href="https://github.com/AlexisCro" target="_blank"><i class="fab fa-github"></i></a>
-              <a class="mx-2" href="https://www.linkedin.com/in/crozier-alexis-5b164b106/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </section>
+        <div>
+          <script id="contact">
+            renderContent('fr/contact', 'contact')
+          </script>
+        </div>
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
         <!-- Bootstrap core JS-->
