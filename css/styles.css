@@ -11168,7 +11168,7 @@ body {
 }
 
 .contact-section {
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 .contact-section .card {
   border: 0;
@@ -11207,11 +11207,6 @@ body {
 
 .footer {
   padding: 5rem 0;
-}
-
-/* skills */
-#skill-gauge {
-  display: none;
 }
 
 .chart span {
@@ -11371,3 +11366,10 @@ button {
   0% { box-shadow: 0 0 0 0 #207cd8; }
 }
 
+/* local btn */
+.locale-btn {
+  background: none;
+  border: none;
+  margin: 0.5em;
+  padding: 0;
+}

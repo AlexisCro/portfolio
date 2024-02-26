@@ -1,314 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Alexis Crozier est un développeur web passioné et impliqué, découvrez son univers au travers de ce portfolio." />
-        <meta name="author" content="Alexis Crozier" />
-        <title>Alexis Crozier - Portfolio</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <!-- Font Awesome icons -->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/media_query.css" rel="stylesheet" />
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content="Alexis Crozier est un développeur web passioné et impliqué, découvrez son univers au travers de ce portfolio." />
+      <meta name="author" content="Alexis Crozier" />
+      <title>Alexis Crozier - Portfolio</title>
+      <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <!-- Font Awesome icons -->
+      <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+      <!-- Google fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+      <!-- Core theme CSS (includes Bootstrap)-->
+      <link href="css/styles.css" rel="stylesheet" />
+      <link href="css/media_query.css" rel="stylesheet" />
+      <script src="js/renderContent.js"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-          <div class="container px-4 px-lg-5">
-            <div class='d-inline-block text-center w-100 my-1'>
-              <a class="navbar-brand m-0 text-center" href="#page-top">Alexis Crozier - Portfolio</a>
-            </div>
-            <div class='d-flex justify-content-center align-items-center w-100'>
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-              </button>
-            </div>
-            <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarResponsive">
-              <ul class="navbar-nav">
-                <li class="nav-item text-center"><a class="nav-link text-nowrap" href="#about">A propos</a></li>
-                <li class="nav-item text-center"><a class="nav-link text-nowrap" href="#skills">Compétences</a></li>
-                <li class="nav-item text-center"><a class="nav-link text-nowrap" href="#projects">Projets</a></li>
-                <li class="nav-item text-center"><a class="nav-link text-nowrap" href="#signup">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <div id="navbar">
+          <script>
+            renderContent('fr/navbar', 'navbar')
+          </script>
+        </div>
         <!-- Masthead-->
-        <header class="masthead">
-          <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-            <div class="d-flex justify-content-center">
-              <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Alexis Crozier</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">Développeur & photographe passionné.</h2>
-                <a class="btn btn-primary" href="#about">Commencer la visite</a>
-              </div>
-            </div>
-          </div>
-        </header>
+        <div id="header">
+          <script>
+            renderContent('fr/header', 'header')
+          </script>
+        </div>
         <!-- About-->
-        <section class="about-section text-center" id="about">
-          <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-              <div class="col-lg-6 pt-5">
-                <h2 class="text-white mb-4">Qui suis-je ?</h2>
-                <p class="text-white-50">
-                    Huit années de travail au sein de laboratoires médicaux dans les hôpitaux (Hospices civiles de Lyon, Fleyriat, Hôpitaux Nord Ouest de Villefranche),
-                    domaine m'ayant appris rigueur, organisation et adaptabilité. Lors de mon dernier post en tant que technicien de laboratoire, j'ai eu l'opportunité de travailler sur d'importants projets informatiques
-                    dont notamment la mise en place d'un logiciel de gestion de laboratoire (GLIMS).
-                    <br/>
-                    C'est à ce moment que j'ai découvert ma passion pour le développement web. 
-                </p>
-                <p class="text-white-50">
-                  Aujourd'hui en reconversion professionnelle, je suis en formation chez
-                  <a href="https://www.ecole-isitech.com/">ISITECH</a>
-                  en alternance avec l'entreprise
-                  <a href="https://www.spendhq.com/resources/notre-nouveau-site-www-spendhq-com-arrive-tres-bientot-en-francais/">Per-Angusta</a>
-                  en tant que développeur full-stack Ruby on Rails.
-                </p>
-              </div>
-              <div class="col-lg-6">
-                <img src="assets/img/alexis-crozier-profile-picture-about.avif" alt="portrait alexis crozier" style="max-width: 100%;" />
-              </div>
-            </div>
-            <div class="row gx-4 gx-lg-5 justify-content-center what-i-like">
-              <div class="col-lg-6">
-                <img src="assets/img/alexis-crozier-about.avif" alt="portrait alexis crozier" style="max-width: 100%;" />
-              </div>
-              <div class="col-lg-6 pt-5">
-                <h2 class="text-white mb-4">Ce que j'aime ?</h2>
-                <p class="text-white-50">
-                  J'apprécie grandement voyager pour acquérir des visions du monde différentes et appliquer ces visions objectives dans mon quotidien.
-                </p>
-                <p class="text-white-50">
-                  J'aime apprendre continuellement, je suis curieux et aime être stimulé cérébralement, c'est pour cela que j'apprécie grandement le développement,
-                  domaine continuellement en expansion et changeant nécessitant adaptation et curiosité.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div id="about">
+          <script>
+            renderContent('fr/about', 'about')
+          </script>
+        </div>
         <!-- Skills -->
-        <section class="skills-section text-center" id="skills">
-          <div class="container px-4 px-lg-5">
-            <!-- skills animation -->
-            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-              <h2 class="text-white mb-4">Compétences</h2>
-              <div class="skills-details text-white-50 justify-content-center flex-row flex-wrap" id="skill-gauge">
-                <div class='d-inline-block mx-2 w-75'>
-                  <div class="chart">
-                    <span>Ruby on Rails</span>
-                    <footer>
-                      <div class="ror"></div>
-                    </footer>
-                  </div>
-                  <div class="chart">
-                    <span>Hotwire</span>
-                    <footer>
-                      <div class="hotwire"></div>
-                    </footer>
-                  </div>
-                  <div class="chart">
-                    <span>Javascript / Stimulus</span>
-                    <footer>
-                      <div class="js"></div>
-                    </footer>
-                  </div>
-                </div>
-
-                <div class='d-inline-block mx-2 w-75'>
-                  <div class="chart">
-                    <span>HTML</span>
-                    <footer>
-                      <div class="html"></div>
-                    </footer>
-                  </div>
-                  <div class="chart">
-                    <span>CSS / Bootstrap</span>
-                    <footer>
-                      <div class="css"></div>
-                    </footer>
-                  </div>
-                  <div class="chart">
-                    <span>GIT / GITHUB</span>
-                    <footer>
-                      <div class="git"></div>
-                    </footer>
-                  </div>  
-                </div>
-
-                <div class="work-row">
-                  <div class="work-box"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div id="skills">
+          <script>
+            renderContent('fr/skills', 'skills')
+          </script>
+        </div>
         <!-- Projects-->
-        <section class="projects-section bg-light">
-          <section class="container px-4 px-lg-5">
-            <h2 class="text-center mb-4">Projets</h2>
-            <!-- Featured Project Row-->
-            <div class="row gx-0 my-5 align-items-center" id="projects">
-              <div class="col-xl-8 col-lg-7">
-                <a href="https://main--converteracr.netlify.app/" target="_blank">
-                  <img class="img-fluid mb-3 mb-lg-0" src="assets/project/converter.png" alt="aperçu projet converter" />
-                </a>
-              </div>
-              <div class="col-xl-4 col-lg-5">
-                <div class="featured-text text-center text-lg-left">
-                  <h4><a class="text-decoration-none text-black" href="https://main--converteracr.netlify.app/" target="_blank">Converter</a></h4>
-                  <p class="text-black-50 mb-0">Converter est une petite application web principalement front faisant appel à 2 API afin de gérer les données.</p>
-                  <p class="text-black-50 mb-0">L'application permet de convertir une devise en une autre, et offre la possibilité de visualiser sur un an l'évolution de devises en fonction d'une autre.</p>
-                  <p class="text-black-50 my-2">Les technologies utilisées : 
-                    <ul class="list-unstyled text-black-50">
-                      <li>HTML</li>
-                      <li>CSS / Bootstrap</li>
-                      <li>Javascript</li>
-                      <li>API</li>
-                    </ul>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="row gx-0 my-5 align-items-center">
-              <div class="col-xl-12 col-lg-12">
-                <img class="img-fluid mb-3" src="assets/project/casavin.avif" alt="logo casavin" />
-              </div>
-              <div class='col-lg-12 d-flex justify-content-center align-items-center'>
-                <div class="featured-text text-center text-lg-left text-black-50">
-                  <p class="mb-0">Réalisée dans le cadre de ma reconversion, CasaVin est une web application réalisée en équipe dont je suis le responsable projet.</p>
-                  <p class="mb-0">
-                    Travailler en équipe est une magnifique opportunité permettant l'approfondissement de ses connaissances via le partage de compétences 
-                    et la mise en place et compréhension de workflow de développement.
-                  </p>
-                  <p>
-                    Le but de cette application est de fournir un outil de gestion de cave à vin aux particuliers et de suivi de leurs vins (suivi de dégustations, suivi de stock, emplacement de la bouteille au sein de leur cave, ...).
-                    Une seconde version de cette application impliquera les professionnels et leur permettra de gérer leur cave ainsi que leur facturation. 
-                    C'est à ce moment que l'application prendra tout son potentiel. Nous souhaitons fournir un outil de mise en relation entre les particuliers et les professionnels du vin de préférences locaux aux particuliers.
-                  </p>
-                  <p>
-                    Ainsi nous souhaitons fournir un outil apportant une aide à la gestion de la cave des particuliers mais aussi un outil permettant la consommation locale ou la relation du caviste local avec le particulier. Le caviste pourra alors être force de proposition et d'aide au particulier.
-                  </p>
-                  <p class="my-2">Méthodologie SCRUM / Agile.</p>
-                  <p class="my-2">Les technologies utilisées : 
-                    <ul class="list-unstyled">
-                      <li>HTML</li>
-                      <li>CSS / Bootstrap</li>
-                      <li>Javascript / Stimulus / Hotwire</li>
-                      <li>Ruby on Rails</li>
-                      <li>PostgreSQL</li>
-                    </ul>
-                  </p>
-                  <p>
-                    <em class="d-block">Toujours en cours de développement à ce jour.</em>
-                    Contactez moi pour une demande d'accès au dépôt GIT.
-                    <div class='d-flex justify-content-center align-items-center'>
-                      <a class="text-decoration-none" href="#form-contact">
-                        <button class="pulse">Contacter</button>
-                      </a>
-                    </div>
-                  </p>
-                </div>
-              </div>                  
-            </div>
-          </section>
-        </section>
-        <section class="about-section">
-          <div class='container'>
-            <h2 class="text-center text-white mb-4">Photographie</h2>
-            <div class="text-center text-white">
-              <p>
-                Une de mes grandes passion est la photographie, couplée au voyage, cette passion m'apporte calme et ouverture d'esprit.
-              </p>
-              <p>
-                J'aimerai partager avec vous un peu de ma passion et vous inviter à embarquer dans mes voyages photographique.
-            </div>
-            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-              <div class="col-lg-6"><img class="img-fluid" src="assets/img/portfolio_photo/iceland/vestrahorn_reflect.avif" alt="photo vestrahorn" /></div>
-              <div class="col-lg-6">
-                <div class="bg-black text-center h-100 project">
-                  <div class="d-flex h-100">
-                    <div class="project-text w-100 my-auto text-center text-lg-left">
-                      <h4 class="text-white">Islande</h4>
-                      <p class="mb-0 text-white-50">Un pays que je rêvais de faire et dont je souhaitais m'approcher de sa beauté sauvage et de ses grandes étendues.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row gx-0 justify-content-center">
-              <div class="col-lg-6"><img class="img-fluid" src="assets/img/portfolio_photo/dolomites/cinque_torri.avif" alt="cinque torri" /></div>
-              <div class="col-lg-6 order-lg-first">
-                <div class="bg-black text-center h-100 project">
-                  <div class="d-flex h-100">
-                    <div class="project-text w-100 my-auto text-center text-lg-right">
-                      <h4 class="text-white">Dolomites</h4>
-                      <p class="mb-0 text-white-50">Massif montagneux du nord de l'Italie offrant des montagnes surgissantes au dessus de prairies et de lacs</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-        </section>
+        <div id="projects">
+          <script>
+            renderContent('fr/projects', 'projects')
+          </script>
+        </div>
         <!-- Signup-->
         <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Vous souhaitez me contacter ?</h2>
-                        <form action="https://formspree.io/f/mwkgblbb" method="post" id="form-contact">
-                            <div class='container'>
-                              <div class='row'>
-                                <div class="btn-group my-2" role="group" aria-label="Basic radio toggle button group">
-                                  <input type="radio" class="btn-check" name="btnradio" value="Mr" id="btnradio1" autocomplete="off" checked>
-                                  <label class="btn btn-outline-primary text-white" for="btnradio1">Mr.</label>
-                                
-                                  <input type="radio" class="btn-check" name="btnradio" value="Mme" id="btnradio2" autocomplete="off">
-                                  <label class="btn btn-outline-primary text-white" for="btnradio2">Mme.</label>
-                                
-                                  <input type="radio" class="btn-check" name="btnradio" value="Autre" id="btnradio3" autocomplete="off">
-                                  <label class="btn btn-outline-primary text-white" for="btnradio3">Autre</label>
-                                </div>
-                              </div>
-                              <div class='row my-2'>
-                                <div class='col-lg-6 mb-2'>
-                                  <input name="firstName" class="form-control" id="firstName" type="text" placeholder="Prénom" aria-label="Prénom" data-sb-validations="required" />
-                                </div>
-                                <div class='col-lg-6 mb-2'>
-                                  <input name="lastName" class="form-control" id="lastName" type="text" placeholder="Nom" aria-label="Nom" data-sb-validations="required" />
-                                </div>
-                              </div>
-                              <div class="row my-2">
-                                <div class="col-md-12">
-                                  <input name="email" class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Email" data-sb-validations="required,email" />
-                                </div>
-                              </div>
-                              <div class='row my-2 px-2'>
-                                <textarea name="message" class="form-control mt-3" id="message" type="text" placeholder="Votre message..." aria-label="Votre message..." data-sb-validations="required"></textarea>
-                              </div>
-                              <div class='row'>
-                                <div class="col">
-                                  <button class="btn btn-primary" id="submitButton" type="submit">Contacter moi !</button>
-                                </div>
-                                <div class="col">
-                                  <button class="btn btn-primary text-white" id="resetButton" type="reset">Reset formulaire</button>
-                                </div>  
+          <div class="container px-4 px-lg-5">
+              <div class="row gx-4 gx-lg-5">
+                  <div class="col-md-10 col-lg-8 mx-auto text-center">
+                      <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                      <h2 class="text-white mb-5">Vous souhaitez me contacter ?</h2>
+                      <form action="https://formspree.io/f/mwkgblbb" method="post" id="form-contact">
+                          <div class='container'>
+                            <div class='row'>
+                              <div class="btn-group my-2" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="btnradio" value="Mr" id="btnradio1" autocomplete="off" checked>
+                                <label class="btn btn-outline-primary text-white" for="btnradio1">Mr.</label>
+                              
+                                <input type="radio" class="btn-check" name="btnradio" value="Mme" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-primary text-white" for="btnradio2">Mme.</label>
+                              
+                                <input type="radio" class="btn-check" name="btnradio" value="Autre" id="btnradio3" autocomplete="off">
+                                <label class="btn btn-outline-primary text-white" for="btnradio3">Autre</label>
                               </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                            <div class='row my-2'>
+                              <div class='col-lg-6 mb-2'>
+                                <input name="firstName" class="form-control" id="firstName" type="text" placeholder="Prénom" aria-label="Prénom" data-sb-validations="required" />
+                              </div>
+                              <div class='col-lg-6 mb-2'>
+                                <input name="lastName" class="form-control" id="lastName" type="text" placeholder="Nom" aria-label="Nom" data-sb-validations="required" />
+                              </div>
+                            </div>
+                            <div class="row my-2">
+                              <div class="col-md-12">
+                                <input name="email" class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Email" data-sb-validations="required,email" />
+                              </div>
+                            </div>
+                            <div class='row my-2 px-2'>
+                              <textarea name="message" class="form-control mt-3" id="message" type="text" placeholder="Votre message..." aria-label="Votre message..." data-sb-validations="required"></textarea>
+                            </div>
+                            <div class='row'>
+                              <div class="col">
+                                <button class="btn btn-primary" id="submitButton" type="submit">Contacter moi !</button>
+                              </div>
+                              <div class="col">
+                                <button class="btn btn-primary text-white" id="resetButton" type="reset">Reset formulaire</button>
+                              </div>  
+                            </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
         </section>
         <!-- Contact-->
         <section class="contact-section bg-black">
@@ -330,7 +120,6 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script src="js/intersectionObservor.js"></script>
         <script src="js/formValidation.js"></script>
     </body>
 </html>
