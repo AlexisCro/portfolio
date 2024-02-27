@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="../../../js/renderContent.js"></script>
+    <script type="module" src="../../../js/buildSectionCard.js" defer="false"></script>
   </head>
   <body class="iceland">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -57,7 +58,7 @@
       <h2>Land of fire and ice</h2>
       <h3 class="text-white-50 text-center">Welcome to a photographic journey to discover the power and beauty of Icelandic nature.</h3>
     </header>
-    <section class="d-flex justify-content-center align-items-center">
+    <section id="galery" class="d-flex justify-content-center align-items-center">
       <div class='card' style="width: 20rem;">
         <img src="../../../assets/img/portfolio_photo/iceland/vestrahorn_reflect.avif" alt="photo vestrahorn" />
         <div class="bg-black text-center card-body">
@@ -73,13 +74,17 @@
           <div class="modal-content">
             <div class="modal-body pt-0">
               <div class="d-flex justify-content-end align-items-center">
-                <button type="button" class="btn-close text-lg-right" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <img src="../../../assets/img/portfolio_photo/iceland/vestrahorn_reflect.avif" alt="photo vestrahorn" style="width: 100%" />
             </div>
           </div>
         </div>
       </div>
+      <script type="module">
+        import { displayCard } from '../../../js/buildSectionCard.js';
+        displayCard('galery');
+      </script>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
