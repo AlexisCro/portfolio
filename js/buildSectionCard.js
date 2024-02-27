@@ -15,6 +15,7 @@ export function displayCard(divId) {
     image.setAttribute('src', library[item].imageUrl)
     image.setAttribute('alt', library[item].name)
     image.style.maxHeight = '180px'
+    image.style.objectFit = 'cover'
 
     let cardBody = document.createElement('div')
     cardBody.classList.add('card-body', 'bg-black', 'text-center')
@@ -74,6 +75,7 @@ function createModal(divId, item) {
   let modalImage = document.createElement('img')
   modalImage.setAttribute('src', library[item].imageUrl)
   modalImage.setAttribute('alt', library[item].name)
+  modalImage.style.width = '100%'
 
   parentElement.insertAdjacentElement('beforeend', modal)
   modal.insertAdjacentElement('beforeend', modalDialog)
