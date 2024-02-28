@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: absolute !important;
+}
+
+/* iceland page */
+.iceland {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-family: "Crimson text", serif;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: "kalam", cursive;
+  font-size: 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  padding-top: 7rem;
+  position: relative;
+  margin-top: 5rem;
+}
+
+.card {
+  border: none !important;
+  background: transparent;
+  margin: 1.2rem;
+  img {
+    border-radius: 8px 8px 0px 0px !important;
+  }
+  .card-body {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 0px 0px 8px 8px !important;
+  }
+}
+
+.card:hover {
+  transform: scale(1.1);
+  img {
+    filter: brightness(0.5);
+  }
+  .btn-modal-card {
+    display: block;
+  }
+  animation: cardHover .4s forwards;
+}
+
+@keyframes cardHover {
+  0% {
+    transform: scale(1);
+    img {
+      filter: brightness(1);
+    }
+  }
+  100% {
+    transform: scale(1.1);
+    img {
+      filter: brightness(0.5);
+    }
+  }
+}
+
+.btn-modal-card {
+  display: none;
+  position: absolute;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.modal-dialog {
+  max-width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.signup-section {
+  background-image: none;
+}
+
+.modal-content {
+  width: max-content;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: initial;
+    width: auto;
+  }
+}
