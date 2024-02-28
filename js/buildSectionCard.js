@@ -1,5 +1,11 @@
 import * as iceland from './icelandLibrary.js'
 export let libraryIceland = iceland.object
+let locale
+if (window.location.pathname.includes('en')) {
+  locale = 'en'
+} else {
+  locale = 'fr'
+}
 
 export function displayCard(divId, library) {
   let parentElement = document.getElementById(divId)
@@ -11,7 +17,7 @@ export function displayCard(divId, library) {
 
     let image = document.createElement('img')
     image.setAttribute('src', library[item].imageUrl)
-    image.setAttribute('alt', library[item].name)
+    image.setAttribute('alt', library[item]['name'][locale])
     image.style.maxHeight = '180px'
     image.style.objectFit = 'cover'
 
@@ -21,13 +27,13 @@ export function displayCard(divId, library) {
 
     let cardTitle = document.createElement('h4')
     cardTitle.classList.add('text-white')
-    cardTitle.textContent = library[item].name
+    cardTitle.textContent = library[item]['name'][locale]
 
     let button = document.createElement('button')
     button.classList.add('btn', 'btn-modal-card', 'w-100', 'h-100')
     button.setAttribute('type', 'button') 
     button.setAttribute('data-bs-toggle', 'modal')
-    button.setAttribute('data-bs-target', `#zoom-${library[item].name.replaceAll(' ', '_')}`)
+    button.setAttribute('data-bs-target', `#zoom-${library[item]['name'][locale].replaceAll(' ', '_')}`)
 
     let icon = document.createElement('i')
     icon.classList.add('fa-regular', 'fa-eye')
@@ -47,7 +53,7 @@ function createModal(divId, item) {
 
   let modal = document.createElement('div')
   modal.classList.add('modal', 'fade')
-  modal.setAttribute('id', `zoom-${item.name.replaceAll(' ', '_')}`)
+  modal.setAttribute('id', `zoom-${item['name'][locale].replaceAll(' ', '_')}`)
   modal.setAttribute('tabindex', '-1')
   modal.setAttribute('aria-labelledby', 'portfolioModalLabel')
   modal.setAttribute('aria-hidden', 'true')
@@ -73,7 +79,7 @@ function createModal(divId, item) {
 
   let modalImage = document.createElement('img')
   modalImage.setAttribute('src', item.imageUrl)
-  modalImage.setAttribute('alt', item.name)
+  modalImage.setAttribute('alt', item['name'][locale])
   modalImage.style.maxWidth = '100%'
   modalImage.style.maxHeight = '80vh'
 

@@ -1,5 +1,4 @@
 let form = document.getElementById('form-contact')
-console.log(form)
 let submitButton = document.getElementById('submitButton')
 let formElements = form.elements
 
