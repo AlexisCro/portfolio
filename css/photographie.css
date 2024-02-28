@@ -3,10 +3,13 @@ body {
   padding: 0;
 }
 
+nav {
+  position: absolute !important;
+}
+
 /* iceland page */
 .iceland {
   background-color: black;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +37,7 @@ header {
   align-items: center;
   width: 100%;
   padding: 2rem;
+  padding-top: 7rem;
   position: relative;
   margin-top: 5rem;
 }
@@ -92,4 +96,19 @@ header {
   max-width: 70%;
   margin: auto;
   margin-top: 3rem;
+}
+
+.signup-section {
+  background-image: none;
+}
+
+.modal-content {
+  width: max-content;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: initial;
+    width: auto;
+  }
 }

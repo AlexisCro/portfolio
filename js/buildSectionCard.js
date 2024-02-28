@@ -1,9 +1,7 @@
-import * as object from './icelandLibrary.js'
-let library = object.object
-console.log(library)
+import * as iceland from './icelandLibrary.js'
+export let libraryIceland = iceland.object
 
-export function displayCard(divId) {
-  console.log('displayCard')
+export function displayCard(divId, library) {
   let parentElement = document.getElementById(divId)
 
   for(let item in library) {
@@ -40,7 +38,7 @@ export function displayCard(divId) {
     cardBody.insertAdjacentElement('beforeend', cardTitle)
     card.insertAdjacentElement('beforeend', button)
     button.insertAdjacentElement('beforeend', icon)
-    createModal(divId, item)
+    createModal(divId, library[item])
   }
 }
 
@@ -49,19 +47,20 @@ function createModal(divId, item) {
 
   let modal = document.createElement('div')
   modal.classList.add('modal', 'fade')
-  modal.setAttribute('id', `zoom-${library[item].name.replaceAll(' ', '_')}`)
+  modal.setAttribute('id', `zoom-${item.name.replaceAll(' ', '_')}`)
   modal.setAttribute('tabindex', '-1')
   modal.setAttribute('aria-labelledby', 'portfolioModalLabel')
   modal.setAttribute('aria-hidden', 'true')
 
   let modalDialog = document.createElement('div')
-  modalDialog.classList.add('modal-dialog')
+  modalDialog.classList.add('modal-dialog', 'd-flex', 'justify-content-center', 'align-items-center')
 
   let modalContent = document.createElement('div')
   modalContent.classList.add('modal-content')
 
   let modalBody = document.createElement('div')
-  modalContent.classList.add('modal-body', 'pt-0')
+  modalBody.classList.add('modal-body', 'pt-0')
+  modalBody.style.maxHeight = '90vh'
 
   let modalDivClose = document.createElement('div')
   modalDivClose.classList.add('d-flex', 'justify-content-end', 'align-items-center')
@@ -73,9 +72,10 @@ function createModal(divId, item) {
   modalClose.setAttribute('aria-label', 'Close')
 
   let modalImage = document.createElement('img')
-  modalImage.setAttribute('src', library[item].imageUrl)
-  modalImage.setAttribute('alt', library[item].name)
-  modalImage.style.width = '100%'
+  modalImage.setAttribute('src', item.imageUrl)
+  modalImage.setAttribute('alt', item.name)
+  modalImage.style.maxWidth = '100%'
+  modalImage.style.maxHeight = '80vh'
 
   parentElement.insertAdjacentElement('beforeend', modal)
   modal.insertAdjacentElement('beforeend', modalDialog)

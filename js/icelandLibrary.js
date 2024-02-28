@@ -10,5 +10,17 @@ export let object = {
   'item3': {
     'name': 'Hello seal',
     'imageUrl': '../../../assets/img/portfolio_photo/iceland/hello_seal.avif'
+  },
+  'item4': {
+    'name': 'Look at the seal',
+    'imageUrl': '../../../assets/img/portfolio_photo/iceland/look_seal.avif'
+  },
+  'item5': {
+    'name': 'Seljalandsfoss',
+    'imageUrl': '../../../assets/img/portfolio_photo/iceland/seljalandsfoss.avif'
+  },
+  'item6': {
+    'name': 'Sky jewels',
+    'imageUrl': '../../../assets/img/portfolio_photo/iceland/sky_jewels.avif'
   }
 }
