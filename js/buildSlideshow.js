@@ -54,7 +54,7 @@ export function buildSlideshow(divId, library) {
   // Loop through the library to create the carousel items and add it to the carousel inner
   for(let item in library) {
     carouselItem = document.createElement('div')
-    carouselItem.classList.add('carousel-item')
+    carouselItem.classList.add('carousel-item', 'text-center')
   
     let image = document.createElement('img')
     image.setAttribute('src', library[item].imageUrl)
