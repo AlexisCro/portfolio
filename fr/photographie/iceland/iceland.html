@@ -18,8 +18,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+<<<<<<< HEAD
     <script src="../../../js/renderContent.js"></script>
     <script type="module" src="../../../js/buildSectionCard.js" defer="false"></script>
+=======
+    <script src="/js/renderContent.js"></script>
+    <script type="module" src="/js/buildSectionCard.js" defer="false"></script>
+    <script type="module" src="/js/buildSlideshow.js" defer="false"></script>
+>>>>>>> 24f873b (carousel)
   </head>
   <body class="iceland">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -60,6 +66,31 @@
         Découvrez un pays où la nature règne.
       </p>
     </header>
+    <section id="carousel-section">
+      <div class='d-flex justify-content-center align-items-center'>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#slideshow">
+          Launch slideshow
+        </button>  
+      </div>
+      <p class="text-white-50 text-center mt-3">Ou visitez la galerie</p>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="slideshow" tabindex="-1" aria-labelledby="modalSlideshow" aria-hidden="true">
+        <div class="modal-dialog d-flex justify-content-center align-items-center" style="max-width: 90%; height: 100vh;">
+          <div class="modal-content" style="background: transparent; border: none;">
+            <div class="modal-body pt-0" style="max-height: 90vh;">
+              <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+                <script type="module">
+                  import { object as libraryIceland } from '/js/icelandLibrary.js';
+                  import { buildSlideshow } from '/js/buildSlideshow.js';
+                  buildSlideshow('carousel', libraryIceland);
+                </script>
+              </div>        
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="galery" class="d-flex justify-content-center align-items-center flex-wrap">
       <script type="module">
         import { libraryIceland } from '../../../js/buildSectionCard.js';
