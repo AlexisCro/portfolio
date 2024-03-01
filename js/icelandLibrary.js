@@ -4,42 +4,42 @@ export let object = {
       'en': 'Vestrahorn Reflection',
       'fr': 'Reflet de Vestrahorn'
     },
-    'imageUrl': '/assets/img/portfolio_photo/iceland/vestrahorn_reflect.jpg'
+    'imageUrl': '../../../assets/img/portfolio_photo/iceland/vestrahorn_reflect.jpg'
   },
   'aurora_landscape_jokullsarlon': {
     'name': {
       'en': 'Aurora above Jokullsarlon',
       'fr': 'Aurore boréale au-dessus de Jokullsarlon'
     },
-    'imageUrl': '/assets/img/portfolio_photo/iceland/aurora_landscape.jpg'
+    'imageUrl': '../../../assets/img/portfolio_photo/iceland/aurora_landscape.jpg'
   },
   'hello_seal': {
     'name': {
       'en': 'Hello seal',
       'fr': 'Bonjour phoque'
     },
-    'imageUrl': '/assets/img/portfolio_photo/iceland/hello_seal.jpg'
+    'imageUrl': '../../../assets/img/portfolio_photo/iceland/hello_seal.jpg'
   },
   'look_at_seal': {
     'name': {
       'en': 'Look at the seal',
       'fr': 'Regarder le phoque'
     },
-    'imageUrl': '/assets/img/portfolio_photo/iceland/look_seal.jpg'
+    'imageUrl': '../../../assets/img/portfolio_photo/iceland/look_seal.jpg'
   },
   'seljalandsfoss': {
     'name': {
       'en': 'Seljalandsfoss',
       'fr': 'Seljalandsfoss'
     },
-    'imageUrl': '/assets/img/portfolio_photo/iceland/seljalandsfoss.jpg'
+    'imageUrl': '../../../assets/img/portfolio_photo/iceland/seljalandsfoss.jpg'
   },
   'sky_jewels': {
     'name': {
       'en': 'Sky jewels',
       'fr': 'Bijoux du ciel'
     },
-    'imageUrl': '/assets/img/portfolio_photo/iceland/sky_jewels.jpg'
+    'imageUrl': '../../../assets/img/portfolio_photo/iceland/sky_jewels.jpg'
   },
   'white_quiet': {
     'name': {
