@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Discover one of Alexis Crozier's photographic journey, passionate photographer whose whish to share with you the landscapes of a wonderfull country: the Iceland." />
     <meta name="author" content="Alexis Crozier" />
-    <title>Alexis Crozier - Photographe - Islande</title>
+    <meta property="og:title" content="Alexis Crozier - Iceland roadtrip" />
+    <meta property="og:description" content="Discover one of Alexis Crozier's photographic journey, passionate photographer whose whish to share with you the landscapes of a wonderfull country: the Iceland." />
+    <meta property="og:image" content="/assets/img/portfolio_photo/iceland/vestrahorn_reflect.jpg" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Alexis Crozier - Portfolio" />
+    <title>Alexis Crozier - Photographe - Iceland</title>
     <link rel="icon" type="image/x-icon" href="../../../assets/favicon.ico" />
     <link rel="stylesheet" href="../../../css/styles.css">
     <link rel="stylesheet" href="../../../css/photographie.css">
@@ -59,6 +66,31 @@
         Discover a country where nature reigns.
       </p>
     </header>
+    <section id="carousel-section">
+      <div class='d-flex justify-content-center align-items-center'>
+        <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#slideshow">
+          Launch slideshow
+        </button>  
+      </div>
+      <p class="text-white-50 text-center mt-3">Or visit galery</p>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="slideshow" tabindex="-1" aria-labelledby="modalSlideshow" aria-hidden="true">
+        <div class="modal-dialog d-flex justify-content-center align-items-center" style="max-width: 90%; height: 100vh;">
+          <div class="modal-content w-100" style="background: transparent; border: none;">
+            <div class="modal-body pt-0 w-100" style="max-height: 90vh;">
+              <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+                <script type="module">
+                  import { object as libraryIceland } from '/js/icelandLibrary.js';
+                  import { buildSlideshow } from '/js/buildSlideshow.js';
+                  buildSlideshow('carousel', libraryIceland);
+                </script>
+              </div>        
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="galery" class="d-flex justify-content-center align-items-center flex-wrap">
       <script type="module">
         import { libraryIceland } from '../../../js/buildSectionCard.js';
