@@ -18,6 +18,7 @@ export function displayCard(divId, library) {
     let image = document.createElement('img')
     image.setAttribute('src', library[item].imageUrl)
     image.setAttribute('alt', library[item]['name'][locale])
+    image.setAttribute('oncontextmenu', 'return false')
     image.style.maxHeight = '180px'
     image.style.objectFit = 'cover'
 
@@ -80,6 +81,7 @@ function createModal(divId, item) {
   let modalImage = document.createElement('img')
   modalImage.setAttribute('src', item.imageUrl)
   modalImage.setAttribute('alt', item['name'][locale])
+  modalImage.setAttribute('oncontextmenu', 'return false')
   modalImage.style.maxWidth = '100%'
   modalImage.style.maxHeight = '80vh'
 

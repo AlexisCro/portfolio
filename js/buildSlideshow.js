@@ -59,6 +59,7 @@ export function buildSlideshow(divId, library) {
     let image = document.createElement('img')
     image.setAttribute('src', library[item].imageUrl)
     image.setAttribute('alt', library[item]['name'][locale])
+    image.setAttribute('oncontextmenu', 'return false')
     image.style.maxWidth = '100%'
     image.style.maxHeight = '80vh'
 
