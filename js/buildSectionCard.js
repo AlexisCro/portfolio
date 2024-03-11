@@ -34,7 +34,7 @@ export function displayCard(divId, library) {
     button.classList.add('btn', 'btn-modal-card', 'w-100', 'h-100')
     button.setAttribute('type', 'button') 
     button.setAttribute('data-bs-toggle', 'modal')
-    button.setAttribute('data-bs-target', `#zoom-${library[item]['name'][locale].replaceAll(' ', '_')}`)
+    button.setAttribute('data-bs-target', `#zoom-${library[item]['name'][locale].replaceAll(' ', '_').replaceAll('\'', '')}`)
 
     let icon = document.createElement('i')
     icon.classList.add('fa-regular', 'fa-eye')
@@ -54,7 +54,7 @@ function createModal(divId, item) {
 
   let modal = document.createElement('div')
   modal.classList.add('modal', 'fade')
-  modal.setAttribute('id', `zoom-${item['name'][locale].replaceAll(' ', '_')}`)
+  modal.setAttribute('id', `zoom-${item['name'][locale].replaceAll(' ', '_').replaceAll('\'', '')}`)
   modal.setAttribute('tabindex', '-1')
   modal.setAttribute('aria-labelledby', 'portfolioModalLabel')
   modal.setAttribute('aria-hidden', 'true')
