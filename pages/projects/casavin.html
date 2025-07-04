@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head id="head">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Alexis Crozier - How Hotwire simplify real-time broadcasting in Rails</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <div id="navbar">
+      <script type="module"">
+        import { renderPartial } from '../../js/partial.js'
+        renderPartial('../../pages/partials/shared/navbar.html', document.getElementById('navbar'))
+      </script>
+    </div>
+
+    <h2 class="text-center mb-3 mt-2">
+      <a href="www.casavin.fr" target="_blank">CasaVin</a>
+    </h2>
+    <div class="d-flex flex-column justify-content-start align-items-start p-2">
+      <div class="w-100 d-flex justify-content-center justify-content-lg-start align-items-center flex-wrap">
+        <img class="mg-fluid img-profile rounded-circle me-2" src="../../assets/img/projets/casavin/logo_icon_300.jpg" alt="Logo CasaVin">
+        <p class="ms-2">
+          CasaVin est une application web de gestion de cave à vin pour particulier ayant pour maîtres mots <strong>Gestion | Dégustations | Conseils</strong>.
+          <br>
+          <br>
+          Elle a été créée lors du cursus de licence RPI - Responsable projet informatique en 2 ans où j'ai eu la chance de pouvoir tenir le rôle de responsable de projet ainsi que de développeur full-stack.
+          <br>
+          <br>
+          Au sein de ce projet j'ai donc pu remplir différentes tâches comme :
+        </p>
+      </div>
+      <ul>
+        <li>La mise en place du workflow selon une méthode AGILE - SCRUM</li>
+        <li>La réalisation du back end en Ruby on Rails</li>
+        <li>L'implémentation d'Hotwire</li>
+        <li>L'implémentation de l'IA</li>
+        <li>La communication au sur les différents réseaux sociaux</li>
+        <li>L'assurance des rendu des livrables</li>
+        <li>La mise en production et la livraison des releases selon une CI/CD</li>
+      </ul>
+
+
+      <h3 class="mt-3">Points techniques</h3>
+      <p class="ms-2">
+        CasaVin est une application construite grâce aux technologies suivantes :
+      </p>
+      <ul>
+        <li><strong>Ruby on Rails</strong> Framework de type MVC dont la ligne directrice est <em>"Convention over Configuration"</em></li>
+        <li><strong>PostgreSQL</strong> Base de données utilisées au sein du projet.</li>
+        <li><strong>Hotwire</strong> Nom commerciale qui reflète l'association de Turbo.js et Stimulus, deux technologies JavaScript permettant de transformer une MPA en SPA tout en gradant l'architecture simple d'une MPA.</li>
+        <li><strong>Bootstrap</strong> Framework css pour permettre un gain de temps sur le responsive et surchargé dans notre projet afin de définir notre propre ligne editrice</li>
+        <li><strong>Threejs</strong> Librairie JavaScript pour la modélisation en 3D d'une cave.</li>
+        <li><strong>HTML / CSS</strong> Technologies élémentaires pour le web.</li>
+      </ul>
+
+      <p class="ms-2">
+        Mais CasaVin c'est aussi un travail en équipe, et de ce fait différents outils ont été mis en place afin de faciliter la cohabitation des acteurs projet et leurs actions. 
+        Ces outils ont aussi été utilisés pour la définition d'une roadmap, la réalisation d'un board de distribution des tâches et la visibilité d'avancement de ces dernières. 
+        <br>
+        <br>
+        <strong>GIT / GITHUB / GITHUB PROJECT</strong>
+      </p>
+
+      <p class="ms-2">
+        Enfin CasaVin est aussi une Web App afin que nos utilisateurs puissent avoir une meilleure expérience dans l'utilisation du produit sur leur smartphone.
+      </p>
+
+      <h3 class="mt-3">Les fonctionnalités</h3>
+      <p>
+        CasaVin propose diverses fonctionnalités afin de satisfaire au mieux ses clients. 
+        Cela passe par la gestion pur et simple de son stock de bouteilles à un accompagnement approfondis dans le monde du vinicole en passant par le partage de connaissances ou la visualisation de sa cave en 3D.
+      </p>
+      <div class="w-100 d-flex flex-wrap justify-content-around align-items-center">
+        <img style="max-width: 80vw;" src="../../assets/img/projets/casavin/index_bottles.png" alt="index bouteilles">
+        <img style="max-width: 80vw;" src="../../assets/img/projets/casavin/index_articles.png" alt="index articles blog">
+        <img style="max-width: 80vw;" src="../../assets/img/projets/casavin/visualisation_3D.png" alt="visualisation 3D de la cave">
+      </div>
+
+      <h4 class="mt-3">La gestion de stock</h4>
+      <p>
+        Il s'agit de la partie freemium de CasaVin. Elle comprends la possibilité d'enregistrer ses bouteilles au sein de l'application, de les retirer quand elles ne sont plus au sein du stock,
+        de les marquer comme favoris, d'intégrer le lien du domaine ou magasin où la bouteille a été achetée afin de faciliter une prochaine commande.
+      </p>
+
+      <h4 class="mt-3">Le recueil de dégustation</h4>
+      <p>
+        Cette fonctionnalités apparaît dès le forfait magnum et permet de marquer ses impressions lors d'une dégustation vinicole. Il n'est pas nécessaire que de vouloir stocker de ce vin pour utiliser la fonctionnalité. 
+        <br>
+        <br>
+        Il suffit d'enregistrer la bouteille mais vous pouvez tout de suite retirer la quantité un de cette bouteille pour générer une dégustation. 
+        Vous aurez alors accès aux étapes de dégustation (robe, goût, profil du vin et appréciation personnelle) et des conseils selon les paramètres utilisateurs.
+        <br>
+        Chacune de vos notes construisent alors un graphique permettant de suivre l'évolution de votre vin.
+        <div class="w-100 d-flex flex-wrap justify-content-around align-items-center">
+          <img style="max-width: 80vw;" src="../../assets/img/projets/casavin/tasting.png" alt="visualisation de l'interface dégustation">
+          <img style="max-width: 80vw;" src="../../assets/img/projets/casavin/wine_evolution.png" alt="visualisation de l'évolution du vin">
+        </div>
+      </p>
+
+      <h4 class="mt-3">L'IA</h4>
+      <p>
+        Parmis les fonctionnalités les plus intéressantes se trouvent celles implémentées avec de l'IA. Cela concerne notre Chatbot, notre OCR ou encore notre aide à la garde.
+        <br>
+        Chacune de ces fonctionnalités sont disponibles à partir de l'abonnement Jeroboam hormis l'OCR accessible dès l'abonnement Magnum.
+        <div class="w-100 d-flex flex-wrap justify-content-around align-items-center">
+          <img style="max-width: 20rem;" src="../../assets/img/projets/casavin/casavin_ocr.jpg" alt="visualisation de l'OCR">
+        </div>
+      </p>
+
+      <div class="mt-4 mb-3 d-flex flex-column justify-content-center align-items-center w-100">
+        <h2>En savoir plus</h2>
+        <p class="text-center">
+          Je serais ravi de pouvoir encore plus échanger avec vous sur ce projet qui m'a passioné et que je maintiens toujours aujourd'hui
+          afin que celui ci me serve de laboratoire, tout en servant les utilisateurs.
+          <br>
+          <br>
+          Alors n'hésitez pas à me contacter via
+          <div class="social-icons">
+            <a class="social-icon" href="https://www.linkedin.com/in/crozier-alexis-developer/"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" href="mailto:alexis.crozier.ac@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </p>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>    
+  </body>
+</html>

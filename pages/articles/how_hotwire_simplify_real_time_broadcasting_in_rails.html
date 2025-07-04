@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <title>Alexis Crozier - How Hotwire simplify real-time broadcasting in Rails</title>
+      <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+      <!-- Font Awesome icons (free version)-->
+      <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+      <!-- Google fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+      <!-- Core theme CSS (includes Bootstrap)-->
+      <link href="../../css/styles.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+      <script src="../../js/hljs.js" defer="true"></script>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation-->
+    <div id="navbar">
+      <script type="module">
+        import { renderPartial } from '../../js/partial.js'
+        renderPartial('../../pages/partials/shared/navbar.html', document.getElementById('navbar'))
+      </script>
+    </div>
+
+    <!-- Article content -->
+    <div class="container-article d-flex flex-column justify-content-center align-items-center px-5 mx-3 my-3">
+      <h1 class="text-center">How Hotwire simplify real-time broadcasting in Rails</h1>
+
+      <img src="../../assets/img/articles/broadcasting_with_hotwire/real-time-hotwire.png" class="w-75" alt="Header image">
+
+      <!-- Summary -->
+      <h3 class="mt-2">Table of Contents</h3>
+      <ol class="ps-1">
+        <li>
+          What is broadcasting?
+        </li>
+
+        <li>
+          Broadcasting and WebSocket technology
+        </li>
+
+        <li>
+          Implementing broadcasts with Hotwire
+        </li>
+
+        <li>
+          How the magic of Hotwire works
+        </li>
+
+        <li>
+          Conclusion
+        </li>
+      </ol>
+    
+      <!-- First point -->
+      <h3>What is Broadcasting ?</h3>
+      <p>
+        In a web application, <strong>broadcasting</strong> refers to the ability to update visible data in real time for users. To illustrate this simply, let’s consider the example of an instant messaging service.
+        <br>
+        <br>
+        This example perfectly demonstrates the usefulness of broadcasting: it enables real-time exchanges between users without requiring them to refresh the page to see the updated data.
+        <br>
+        <br>
+        To understand how this is achieved, let’s dive into the underlying technology: WebSockets.
+      </p>
+    
+      <!-- Second point -->
+      <h3>Broadcasting and WebSocket Technology</h3>
+      <p>
+        In a traditional client-server exchange, the client typically sends an HTTP request to the server following a user action, and the server responds with the necessary data.
+        <br>
+        <br>
+        <strong>WebSockets</strong>, on the other hand, establish a persistent connection that remains semi-open. This process begins with an initialization phase, known as the handshake, during which the client sends the necessary credentials to establish the communication channel.
+        <br>
+        <br>
+        Once the connection is established, it remains open, allowing the server to push updates to the client without requiring additional requests from the client.
+      </p>
+      <img src="../../assets/img/articles/broadcasting_with_hotwire/websocket-schema.png" class="w-75" alt="Websocket Schema">
+
+      <!-- Third Point -->
+      <h3>Implementing Broadcasts with Hotwire</h3>
+      <p>
+        <strong>Hotwire</strong> significantly simplifies the code and setup needed for implementing broadcasts.
+        <br>
+        <br>
+        To illustrate this, here’s an example from a personal project, <a href="www.casavin.fr" target="_blank">CasaVin</a>, where I needed to create a real-time messaging system for blog users.
+      </p>
+
+      <h4>Step 1 : Configure an event listener in the model</h4>
+      <p>
+        In the relevant model, we add a callback to dynamically replace a target element with a partial after an update:
+      </p>
+      <pre>
+        <code>
+after_update_commit { broadcast_replace_to "blog_#{id}", partial: "your/partial/path", locals: { blog: self } }
+        </code>
+      </pre>
+
+      <h4>Step 2 : Initialize the WebSocket and define the target</h4>
+      <p>
+        In the relevant view, activate the WebSocket using turbo_stream_from and specify the target element to be updated, such as an HTML container:
+      </p>
+      <pre>
+        <code>
+<%= turbo_stream_from blog %>
+&lt;div id=<%= dom_id(blog) %>"&gt;
+    ...
+&lt;/div&gt;
+        </code>
+      </pre>
+
+      <h4>Step 3 : Create a basic controller action</h4>
+      <p>
+        Finally, define an action in the controller to handle the update. Here’s an example:
+      </p>
+      <pre>
+        <code>
+# app/controllers/blogs_controller.rb
+def update
+    @blog = Blog.find(params[:id])
+    # Logic for updating messages
+    unless @blog.update(messages: messages)
+      redirect_to blogs_path; alert: "Error during message submission"
+    end
+end
+        </code>
+      </pre>
+
+      <img src="../../assets/img/articles/broadcasting_with_hotwire/magic.gif" alt="Magic gif">
+
+      <p>And that’s it 🚀 ! The magic of <strong>Hotwire</strong> takes care of the rest.</p>
+
+      <!-- Fourth point -->
+      <h3>How the magic of Hotwire works</h3>
+      <p>
+        Hotwire might seem magical at first glance, but let’s break down what’s actually happening.
+      </p>
+      <ul>
+        <li class="mb-2">
+          <strong>WebSocket Registration</strong> when the view is loaded, a WebSocket connection is opened and registered between the client (browser, tab) and the server.
+          <img src="../../assets/img/articles/broadcasting_with_hotwire/open-websocket.png" class="w-75 mt-2 m-auto d-flex align-self-center justify-self-center" alt="Open WebSocket">
+        </li>
+
+        <li>
+          <strong>Identifying the Target</strong> in the view, we specify which component Hotwire should update when an event triggers a change in the model.
+        </li>
+
+        <li>
+          <strong>Updating via Turbo Stream</strong> when an update occurs on the object (via after_update_commit), the server sends a response in the form of a Turbo Stream through ActionCable. This response contains the necessary data to dynamically update the client’s DOM.
+          <img src="../../assets/img/articles/broadcasting_with_hotwire/return-actioncable.png" class="w-75 mt-2 m-auto d-flex align-self-center justify-self-center" alt="Return actioncable">
+        </li>
+      </ul>
+
+      <!-- Conclusion -->
+      <h3>Conclusion</h3>
+      <p>
+        Hotwire leverages ActionCable, the native Rails component for managing WebSockets. However, it eliminates the need to manually configure ActionCable, drastically reducing both complexity and the amount of code required.
+        <br>
+        <br>
+        Moreover, while traditional implementations require JavaScript to update the DOM with new data, Hotwire handles this seamlessly, providing an elegant and efficient solution for managing real-time updates.
+        <br>
+        <br>
+        I invite you to consult the <a href="https://guides.rubyonrails.org/action_cable_overview.html" target="_blank">Action Cable</a> documentation for a better understanding of how to configure it in Rails without Hotwire.
+      </p>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
